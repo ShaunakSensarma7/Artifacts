@@ -1,0 +1,190 @@
+[jenkins@freebsd-dev-1 ~/git/FreeBSD/usr.tidalscale/bin]$ ts build -f -f -e release -p metal wr3
+obj = /home/jenkins/obj
+>>> Version set to: develop_RELEASE_62473_a2d06a6baeb
+                    -> Version develop_RELEASE_62473_a2d06a6baeb -- pod type metal
+     9 targets done -> Clean world
+                    -> World build started on Thu Aug 10 05:26:57 PDT 2023
+                    -> Rebuilding the temporary build tree
+     1  target done -> stage 1.1: legacy release compatibility shims
+    15 targets done -> stage 1.2: bootstrap tools
+  1016 targets done -> stage 2.1: cleaning up the object tree
+     9 targets done -> stage 2.3: build tools
+    14 targets done -> stage 3: cross tools
+                    -> stage 3.1: recording build metadata
+  1049 targets done -> stage 4.1: building includes
+   574 targets done -> stage 4.2: building libraries
+  1039 targets done -> stage 4.4: building everything
+                    -> World build completed on Thu Aug 10 07:24:39 PDT 2023
+                    -> World built in 7062 seconds, ncpu: 4, make -j8
+Password:           -> Install FreeBSD distribution
+  1038 targets done
+                    -> Installworld started
+                    -> Install check world
+                    -> Making hierarchy
+  1038 targets done -> Installing everything started on Thu Aug 10 07:25:03 PDT 2023
+                    -> Installing everything completed on Thu Aug 10 07:25:30 PDT 2023
+    37 targets done -> Installing additional packages
+---------------------------------------------------------------------------------
+ts-build: world: build succeeded
+Build system:       freebsd-dev-1
+Build environment:  RELEASE
+Build command:      ts build
+Version:            develop_RELEASE_62473_a2d06a6baeb
+Pod type:           metal
+Elapsed time:       01:58:45
+Build log:          /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.out
+Script errors:      /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.err
+---------------------------------------------------------------------------------
+
+    69 targets done
+                    -> compress /hyperkernel/release/resources/node.img.gz
+---------------------------------------------------------------------------------
+ts-build: wr3-node-img: build succeeded
+Build system:       freebsd-dev-1
+Build environment:  RELEASE
+Build command:      ts build
+Version:            develop_RELEASE_62473_a2d06a6baeb
+Pod type:           metal
+Elapsed time:       01:58:49
+Build log:          /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.out
+Script errors:      /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.err
+---------------------------------------------------------------------------------
+
+
+     1  target done -> Kernel build for TS-RELEASE started on Thu Aug 10 07:25:47 PDT 2023
+                    -> stage 1: configuring the kernel
+   886 targets done -> stage 2.1: cleaning up the object tree
+                    -> stage 2.3: build tools
+   886 targets done -> stage 3.1: building everything
+                    -> Kernel build for TS-RELEASE completed on Thu Aug 10 07:39:53 PDT 2023
+Password:           -> Kernel(s) TS-RELEASE built in 846 seconds, ncpu: 4, make -j8
+
+                    -> Install kernel
+                    -> Install check kernel
+   886 targets done -> Installing kernel TS-RELEASE on Thu Aug 10 07:40:12 PDT 2023
+     1  target done -> Installing kernel TS-RELEASE completed on Thu Aug 10 07:40:21 PDT 2023
+                    -> create /hyperkernel/release/resources/kernel.gz
+---------------------------------------------------------------------------------
+ts-build: wr3-kernel: build succeeded
+   world build: a2d06a6baeb_develop_release
+  kernel build: a2d06a6baeb_develop_release
+      ts build: a2d06a6baeb_develop_release
+Build system:       freebsd-dev-1
+Build environment:  RELEASE
+Build command:      ts build
+Version:            develop_RELEASE_62473_a2d06a6baeb
+Pod type:           metal
+Elapsed time:       00:14:37
+Build log:          /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.out
+Script errors:      /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.err
+---------------------------------------------------------------------------------
+
+
+     6 targets done -> populate /hyperkernel/release/resources boot files
+                    -> TidalScale build started on 2023-08-10 07:40:24 POD_ROOT: /tidalpod
+     6 targets done -> TidalScale cleaning everything
+                    -> ts_obj: building usr.sbin/tidalscale object tree
+    12 targets done -> buildtsincludes: building includes
+     1  target done -> buildlibts: Build and install TidalScale lib
+     6 targets done -> buildtsutils: Building TidalScale utilities
+                    -> buildtsmodule: Building TidalScale kernel module
+     1  target done -> Kernel build for TS-RELEASE started on Thu Aug 10 07:40:53 PDT 2023
+                    -> stage 2.3: build tools
+     1  target done -> stage 3.1: building everything
+                    -> Kernel build for TS-RELEASE completed on Thu Aug 10 07:41:11 PDT 2023
+                    -> Kernel(s) TS-RELEASE built in 18 seconds, ncpu: 4, make -j8
+                    -> Install check kernel
+     1  target done -> Installing kernel TS-RELEASE on Thu Aug 10 07:41:11 PDT 2023
+                    -> Installing kernel TS-RELEASE completed on Thu Aug 10 07:41:11 PDT 2023
+                    -> Building TidalScale B-B-BIOS
+                    -> Installing TidalScale UEFI
+                    -> Building TidalScale Test Kernel Modules
+                    -> Source line count: 152275
+                    -> Build status: 0
+    12 targets done -> Installing TidalScale
+    67 targets done -> Installing TidalScale distribution
+     1  target done -> build /hyperkernel/release/resources/hk.tar
+                    -> compress /hyperkernel/release/resources/hk.tgz
+---------------------------------------------------------------------------------
+ts-build: wr3-hk-tgz: build succeeded
+   world build: a2d06a6baeb_develop_release
+  kernel build: a2d06a6baeb_develop_release
+      ts build: a2d06a6baeb_develop_release
+Build system:       freebsd-dev-1
+Build environment:  RELEASE
+Build command:      ts build
+Version:            develop_RELEASE_62473_a2d06a6baeb
+Pod type:           metal
+Elapsed time:       00:00:57
+Build log:          /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.out
+Script errors:      /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.err
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+ts-build: wr3-dist: build succeeded
+   world build: a2d06a6baeb_develop_release
+  kernel build: a2d06a6baeb_develop_release
+      ts build: a2d06a6baeb_develop_release
+Build system:       freebsd-dev-1
+Build environment:  RELEASE
+Build command:      ts build
+Version:            develop_RELEASE_62473_a2d06a6baeb
+Pod type:           metal
+Elapsed time:       00:00:58
+Build log:          /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.out
+Script errors:      /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.err
+---------------------------------------------------------------------------------
+
+
+                    -> build /hyperkernel/release/hyperkernel.tgz
+---------------------------------------------------------------------------------
+ts-build: wr3-hyperkernel-tgz: build succeeded
+   world build: a2d06a6baeb_develop_release
+  kernel build: a2d06a6baeb_develop_release
+      ts build: a2d06a6baeb_develop_release
+Build system:       freebsd-dev-1
+Build environment:  RELEASE
+Build command:      ts build
+Version:            develop_RELEASE_62473_a2d06a6baeb
+Pod type:           metal
+Elapsed time:       00:01:06
+Build log:          /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.out
+Script errors:      /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.err
+---------------------------------------------------------------------------------
+
+
+     3 targets done -> build /hyperkernel/release/debug.tar
+                    -> compress /hyperkernel/release/debug.tgz
+---------------------------------------------------------------------------------
+ts-build: wr3-debug-tgz: build succeeded
+   world build: a2d06a6baeb_develop_release
+  kernel build: a2d06a6baeb_develop_release
+      ts build: a2d06a6baeb_develop_release
+Build system:       freebsd-dev-1
+Build environment:  RELEASE
+Build command:      ts build
+Version:            develop_RELEASE_62473_a2d06a6baeb
+Pod type:           metal
+Elapsed time:       00:00:36
+Build log:          /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.out
+Script errors:      /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.err
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+ts-build: wr3: build succeeded
+   world build: a2d06a6baeb_develop_release
+  kernel build: a2d06a6baeb_develop_release
+      ts build: a2d06a6baeb_develop_release
+Build system:       freebsd-dev-1
+Build environment:  RELEASE
+Build command:      ts build
+Version:            develop_RELEASE_62473_a2d06a6baeb
+Pod type:           metal
+Elapsed time:       00:00:36
+Build log:          /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.out
+Script errors:      /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.err
+---------------------------------------------------------------------------------
+
+[jenkins@freebsd-dev-1 ~/git/FreeBSD/usr.tidalscale/bin]$ 
