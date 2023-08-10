@@ -1,0 +1,112 @@
+[jenkins@freebsd-dev-1 ~/git/FreeBSD/usr.tidalscale/bin]$ ts build -f -f -e release -p metal wr3
+obj = /home/jenkins/obj
+Password:
+>>> Version set to: develop_RELEASE_62473_a2d06a6baeb
+                    -> Version develop_RELEASE_62473_a2d06a6baeb -- pod type metal
+     6 targets done -> populate /hyperkernel/release/resources boot files
+                    -> TidalScale build started on 2023-08-10 01:30:16 POD_ROOT: /tidalpod
+     6 targets done -> TidalScale cleaning everything
+                    -> ts_obj: building usr.sbin/tidalscale object tree
+    12 targets done -> buildtsincludes: building includes
+     1  target done -> buildlibts: Build and install TidalScale lib
+     6 targets done -> buildtsutils: Building TidalScale utilities
+                    -> buildtsmodule: Building TidalScale kernel module
+     1  target done -> Kernel build for TS-RELEASE started on Thu Aug 10 01:31:11 PDT 2023
+                    -> stage 2.3: build tools
+     1  target done -> stage 3.1: building everything
+                    -> Kernel build for TS-RELEASE completed on Thu Aug 10 01:31:35 PDT 2023
+                    -> Kernel(s) TS-RELEASE built in 24 seconds, ncpu: 2, make -j4
+                    -> Install check kernel
+     1  target done -> Installing kernel TS-RELEASE on Thu Aug 10 01:31:35 PDT 2023
+                    -> Installing kernel TS-RELEASE completed on Thu Aug 10 01:31:36 PDT 2023
+                    -> Building TidalScale B-B-BIOS
+                    -> Installing TidalScale UEFI
+                    -> Building TidalScale Test Kernel Modules
+                    -> Source line count: 152275
+                    -> Build status: 0
+    12 targets done -> Installing TidalScale
+    67 targets done -> Installing TidalScale distribution
+     1  target done -> build /hyperkernel/release/resources/hk.tar
+                    -> compress /hyperkernel/release/resources/hk.tgz
+---------------------------------------------------------------------------------
+ts-build: wr3-hk-tgz: build succeeded
+   world build: a2d06a6baeb_dirty_develop_release
+  kernel build: a2d06a6baeb_dirty_develop_release
+      ts build: a2d06a6baeb_dirty_develop_release
+Build system:       freebsd-dev-1
+Build environment:  RELEASE
+Build command:      ts build
+Version:            develop_RELEASE_62473_a2d06a6baeb
+Pod type:           metal
+Elapsed time:       00:01:30
+Build log:          /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.out
+Script errors:      /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.err
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+ts-build: wr3-dist: build succeeded
+   world build: a2d06a6baeb_dirty_develop_release
+  kernel build: a2d06a6baeb_dirty_develop_release
+      ts build: a2d06a6baeb_dirty_develop_release
+Build system:       freebsd-dev-1
+Build environment:  RELEASE
+Build command:      ts build
+Version:            develop_RELEASE_62473_a2d06a6baeb
+Pod type:           metal
+Elapsed time:       00:01:30
+Build log:          /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.out
+Script errors:      /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.err
+---------------------------------------------------------------------------------
+
+
+                    -> build /hyperkernel/release/hyperkernel.tgz
+---------------------------------------------------------------------------------
+ts-build: wr3-hyperkernel-tgz: build succeeded
+   world build: a2d06a6baeb_dirty_develop_release
+  kernel build: a2d06a6baeb_dirty_develop_release
+      ts build: a2d06a6baeb_dirty_develop_release
+Build system:       freebsd-dev-1
+Build environment:  RELEASE
+Build command:      ts build
+Version:            develop_RELEASE_62473_a2d06a6baeb
+Pod type:           metal
+Elapsed time:       00:01:39
+Build log:          /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.out
+Script errors:      /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.err
+---------------------------------------------------------------------------------
+
+
+     3 targets done -> build /hyperkernel/release/debug.tar
+                    -> compress /hyperkernel/release/debug.tgz
+---------------------------------------------------------------------------------
+ts-build: wr3-debug-tgz: build succeeded
+   world build: a2d06a6baeb_dirty_develop_release
+  kernel build: a2d06a6baeb_dirty_develop_release
+      ts build: a2d06a6baeb_dirty_develop_release
+Build system:       freebsd-dev-1
+Build environment:  RELEASE
+Build command:      ts build
+Version:            develop_RELEASE_62473_a2d06a6baeb
+Pod type:           metal
+Elapsed time:       00:00:37
+Build log:          /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.out
+Script errors:      /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.err
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+ts-build: wr3: build succeeded
+   world build: a2d06a6baeb_dirty_develop_release
+  kernel build: a2d06a6baeb_dirty_develop_release
+      ts build: a2d06a6baeb_dirty_develop_release
+Build system:       freebsd-dev-1
+Build environment:  RELEASE
+Build command:      ts build
+Version:            develop_RELEASE_62473_a2d06a6baeb
+Pod type:           metal
+Elapsed time:       00:00:37
+Build log:          /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.out
+Script errors:      /home/jenkins/tmp/ts_build/_wr3_a2d06a6baeb.err
+---------------------------------------------------------------------------------
+
